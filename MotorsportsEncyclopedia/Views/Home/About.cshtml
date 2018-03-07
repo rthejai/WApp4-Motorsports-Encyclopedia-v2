@@ -1,0 +1,32 @@
+﻿@model IEnumerable<MotorsportsEncyclopedia.ViewModels.EnrollmentYearGroup>
+
+@{
+    ViewBag.Title = "Car Year Statistics";
+}
+
+<h2>Car Year Statistics</h2>
+
+<table>
+    <tr>
+        <th>
+            Car Year
+        </th>
+
+        <th>
+            Cars
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CarYear)
+            </td>
+
+            <td>
+                @item.CarCount
+            </td>
+        </tr>
+    }
+</table>
